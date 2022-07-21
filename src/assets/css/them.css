@@ -1,0 +1,27 @@
+.right form {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    display: grid;
+    grid-template-rows: 10%;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.right form .form_label {
+    display: grid;
+    grid-template-columns: 20% 60%;
+    padding: 10px 100px;
+}
+
+.right form input {
+    height: 30px;
+    padding: 5px 20px;
+    outline: none;
+}
+
+textarea {
+    padding: 5px 20px;
+    height: 100px;
+}
+

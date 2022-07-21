@@ -1,0 +1,36 @@
+<div class="san_pham">
+  <div class="tieu_de">
+      <h3>Tất cả sản phẩm</h3>
+      <div class="loc">
+          <select name="" id="">
+              <option value="">Sắp xếp theo</option>
+              <option value="">Tên: A - Z</option>
+              <option value="">Tên: Z - A</option>
+              <option value="">Mới nhất</option>
+              <option value="">Giá cao nhất</option>
+              <option value="">Giá thấp nhất</option>
+          </select>
+      </div>
+  </div>
+
+  <div class="san_pham_m" >
+      <div class="box_sp" *ngFor="let product of products" id="idsp">
+          <div style="height: 330px;">
+              <img [src]="product.image_url"  >
+          </div><br>
+          <p class="ten_sp"><a routerLink="/phones/{{product.id}}">{{product.name}}</a></p>
+          <span>
+              <p class="gia_km">{{product.price}}<sup>đ</sup></p>
+          </span>
+          <div class="nut">
+              <div class="them">
+                  <a href="#">Thêm vào giỏ hàng</a>
+              </div>
+              <div class="chi_tiet">
+                  <a routerLink="/phones/{{product.id}}">Chi tiết</a>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: auto;
+    width: 100%;
+    padding: 30px 60px;
+    height: auto;
+    background: rgba(255, 240, 240, 0.277);
+}
+
+main .content {
+    height: 500px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+main .content .box-anh img {
+    height: 500px;
+    border-radius: 50%;
+    border: 5px solid rgb(20, 83, 132);
+}
+
+main .content .box-text {
+    height: 500px;
+    padding-top: 100px;
+}
+main .content .box-text h3{
+    font-size: 30px;
+    line-height: 50px;
+}
+main .content .box-text strong{
+    color: #161b99;
+}
+main .content .box-text p{
+    font-size: 20px;
+    line-height: 40px;
+}

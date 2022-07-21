@@ -1,0 +1,7 @@
+<div *ngIf="formField.dirty" class="text-danger" style="font-size: 13px;">
+    <p *ngIf="formField.errors?.['required']">{{key}} bắt buộc nhập </p>
+    <p *ngIf="formField.errors?.['minlength']">{{key}} tối thiểu 6 ký tự</p>
+    <p *ngIf="formField.errors?.['maxlength']">{{key}} không quá 50 ký tự</p>
+    <p *ngIf="formField.errors?.['maxlength']">{{key}} không quá 50 ký tự</p>
+
+</div>

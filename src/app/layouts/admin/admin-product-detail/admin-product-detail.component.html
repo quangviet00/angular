@@ -1,0 +1,53 @@
+<style>
+    .box_ct{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .box_ct .box_anh_ct{
+        height: 500px;
+        text-align: center;
+    }
+    .box_ct .box_anh_ct img{
+        height: 500px;
+    }
+    .box_ct .box_text_ct{
+        font-size: 16px;
+        text-align: justify;
+        padding-right: 20px;
+    }
+    .box_ct .box_text_ct button{
+        background: rgb(0, 76, 255);
+        padding: 10px 15px;
+        color: #fff;
+        border-radius: 5px;
+        border: 2px solid rgb(0, 32, 162);
+    }
+    .box_ct .box_text_ct button:hover{
+        background: #fff;
+        color: rgba(0, 0, 0, 0.838);
+    }
+    .box_ct .box_text_ct .btn_2{
+        background: green;
+        color: #fff;
+
+    }
+</style>
+<div class="box_ct">
+    <div class="box_anh_ct">
+        <img [src]="product.image_url" alt="">
+    </div>
+    <div class="box_text_ct">
+        <p>ID sản phẩm: <strong>{{product.id}}</strong></p>
+        <h3>Tên sản phẩm: <strong>{{product.name}}</strong></h3>
+        <p>Giá sản phẩm: <strong>{{product.price}} <sup>đ</sup></strong></p>
+        <p>Trạng thái: <strong *ngIf="product.status === 1">Còn hàng</strong>
+            <strong *ngIf="product?.status === 0">Hết hàng</strong></p>
+        <h4>Mô tả:</h4>
+        <p>{{product.desc}}</p>
+
+        <div class="btn_nut_ct">
+            <button routerLink="/admin/products/edit/{{product.id}}">Sửa sản phẩm</button>&nbsp;&nbsp;
+            <button class="btn_2" routerLink="/admin/products">Quay lại</button>
+        </div>
+    </div>
+</div>

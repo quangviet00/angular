@@ -1,0 +1,34 @@
+<div class="top_ct_t">
+    <div class="top_ct">
+        <div class="left">
+            <div class="box_anh">
+                <img [src]="product.image_url" alt="">
+            </div>
+            
+        </div>
+        <div class="right">
+            <h3>{{product.name}}</h3>
+            <hr>
+            <span>
+                <p class="gia_km">{{product.price}}<sup>đ</sup></p>
+            </span>
+            <span>
+                <p>Trạng thái: <strong *ngIf="product.status === 1">Còn hàng</strong>
+                    <strong *ngIf="product?.status === 0">Hết hàng</strong></p>
+            </span><br>
+            <div class="quantity-area">
+                <input type="button" value="-" onclick="minusQuantity()" class="qty-btn btn-left-quantity">
+                <input type="text" id="quantity" name="quantity" value="1" min="1"
+                    class="quantity-selector">
+                <input type="button" value="+" onclick="plusQuantity()" class="qty-btn btn-right-quantity">
+            </div>
+            <div class="them">
+                <a routerLink="/phones">Quay lại</a>
+            </div><br>
+            <h2>Mô tả sản phẩm</h2>
+            <div class="mota">
+                <p>{{product.desc}}</p>
+            </div>
+        </div>
+    </div>
+</div>
